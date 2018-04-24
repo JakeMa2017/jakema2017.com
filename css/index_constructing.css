@@ -1,0 +1,76 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.name-banner {
+    text-align: center;
+    margin-bottom: 5%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    display: none;
+}
+
+#pages {
+    padding-bottom: 25%;
+}
+
+.padding {
+    padding-top: 25%;
+}
+
+.home-nav {
+    color: white;
+    text-decoration: none;
+}
+.home-nav:hover {
+    color:white;
+    text-decoration: none;
+}
+
+.home-nav:visited {
+    text-decoration: none;
+}
+
+#headBackground {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#aboutMe {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.nav-transparent {
+    background: transparent;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.nav-mine {
+    padding-right: 8%;
+    padding-top: 3%;
+}
+
+#hide-this {
+    color: black;
+}
+#hide-this:link {
+    text-decoration: none;
+}
+#hide-this:visited {
+    text-decoration: none;
+}
+#hide-this:hover {
+    text-decoration: none;
+}
+#hide-this:active {
+    text-decoration: none;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name = "author" content = "Bridger Ma">
+    <link rel='icon' href='../img/favicon.jpg' type='jpg'> 
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+	<title>Chang Sun</title>
+</head>
+<body>
+	<header class="container-fluid">
+		<nav class="navbar navbar-expand-sm navbar-dark nav-transparent justify-content-end nav-mine text-uppercase" style="font-family: 'Open Sans', sans-serif;">
+			<ul class="nav navbar-nav">
+				<li class="nav-item px-3"><a class="nav-link" href="../index_constructing.html">Home</a></li>
+				<li class="nav-item px-3"><a class="nav-link" href="iliketo.html">Interests</a></li>
+				<li class="nav-item px-3"><a class="nav-link" href="pics.html">Pictures</a></li>
+				<li class="active nav-item px-3"><a class="nav-link" href="#">Chang</a></li>
+			</ul>
+		</nav>
+		<h1 class="text-uppercase name-banner">Chang Sun<br><small class="text-lowercase secondary-text">A beloved friend of mine. A gifted photographer.</small></h1>
+		<img id="headBackground" src="../img/umn-bw.jpg" alt="umn">
+	</header>
+
+	<main>
+		
+		<div class="container-fluid bg-light d-xs-none">
+					<!-- Carousel for horizontal pics -->
+					<div id="changPics" class="mx-auto carousel slide w-75" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#changPics" data-slide-to="0" class="active"></li>
+							<li data-target="#changPics" data-slide-to="1"></li>
+							<li data-target="#changPics" data-slide-to="2"></li>
+							<li data-target="#changPics" data-slide-to="3"></li>
+							<li data-target="#changPics" data-slide-to="4"></li>
+							<li data-target="#changPics" data-slide-to="5"></li>
+							<li data-target="#changPics" data-slide-to="6"></li>
+							<li data-target="#changPics" data-slide-to="7"></li>
+						</ol>
+
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img class="w-100" src="../img/chang-pics/chang-shooting.jpg" alt="photographing" height="700">
+							</div>
+							<div class="carousel-item">
+								<img class="w-100" src="../img/chang-pics/arch.jpg" alt="arch" height="700">
+							</div>
+							<div class="carousel-item">
+								<img class="w-100" src="../img/chang-pics/pano.jpg" alt="pano" height="700">
+							</div>
+							<div class="carousel-item">
+								<img class="w-100" src="../img/chang-pics/milkyway.jpg" alt="milkyway" height="700">
+							</div>
+							<div class="carousel-item">
+								<img class="w-100" src="../img/chang-pics/skyline.jpg" alt="skyline" height="700">
+							</div>
+							<div class="carousel-item">
+								<img class="w-100" src="../img/chang-pics/sunset.jpg" alt="sunset" height="700">
+							</div>
+							<div class="carousel-item">
+								<img class="w-100" src="../img/chang-pics/train.jpg" alt="train" height="700">
+							</div>
+							<div class="carousel-item">
+								<img class="w-100" src="../img/chang-pics/wood.jpg" alt="wood" height="700">
+							</div>
+						</div>
+
+						<a class="carousel-control-prev" href="#changPics" data-slide="prev">
+							<span class="carousel-control-prev-icon"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#changPics" data-slide="next">
+							<span class="carousel-control-next-icon"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+		</div>
+
+
+
+		<div class="container-fluid py-5">
+			<div class="row">
+				<div class="col-sm-6">
+					<img src="../img/chang-portrait.jpg" class="rounded-circle img-fluid mx-auto d-block" alt="like a boss">
+				</div>
+				<div class="col-sm-6">
+					<a id="hide-this" href="chang.html"><h3 class="text-center" data-toggle="tooltip" data-placement="top" title="so u found this..." href="chang.html">BIO</h3></a>
+					
+					<p class="text-center pt-5">Use your imagination. He can be anyone (anything) you like...</p>
+				
+				</div>
+			</div>
+		</div>
+		
+	</main>
+
+	<footer class="d-block bg-dark text-muted mt-4 text-left">
+		<div class="container-fluid py-3">
+			<div class="row">
+				<div class="col-sm-4">
+					<h5>Bridger Ma &copy;2017</h5>
+				</div>
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4"></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2"><p>Since Mar. 2017</p></div>
+				<div class="col-sm-2"><p class="pre">Last Update: 11/6/2017</p></div>
+				<div class="col-sm-4"></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<p class="small">Current Date: <span id="dateee"></span></p><script>document.getElementById('dateee').innerHTML = Date();</script>
+				</div>
+			</div>
+    	</div>
+    </footer>
+
+    <script>
+		$(document).ready(function(){
+    		$	('[data-toggle="tooltip"]').tooltip();   
+		});
+	</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</body>
+</html>
