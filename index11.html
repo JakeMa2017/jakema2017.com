@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta charset = "UTF-8" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="http://www.bridgerma.com/favicon.ico?v=2" />
+	<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ > 
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/index.js"></script>
+	<title>Bridger's Page</title>
+</head>
+
+<body onload="displayFitIphone()">
+	<header>
+		<h1>Greetings from Minnesota!</h1>
+	</header>
+
+	<main>
+
+	<section>
+	<h2 id="intro">Intro</h2>
+	<p> I'm trying to learn web development by myself. This page will be constantly updated to show my learning progress as I keep moving forward.</p>
+
+	<p class="banner">Most layout designs are best supported on PC or laptop browsers.</p>
+
+
+
+	<p>Today's weather in <a href="https://weather.com/weather/today/l/USMN0503:1:US" target="_blank">Minneapolis</a></p>
+
+	<p>Today's weather in <a href="https://weather.com/weather/today/l/USPA1276:1:US" target="_blank">Philadelphia</a></p>
+
+	<p id="buttonTest" class="testolo">This button doesn't do anything</p>
+	<button type="button" onclick="nothingButtion()">Don't Click</button><br>
+
+	<audio controls> <source src="css/audio/Nandemonaiya.mp3" type="audio/mpeg"></audio>
+
+	<br><br><br>
+	<hr>
+	</section>
+	<br><br>
+	<hr>
+
+	<section>
+	<h3>Things to do:</h3>
+		<ul>
+			<li>Create a page with tags I have learned so far (%53.85) <progress value="14" max="26"></progress></li>
+		</ul>
+	</section>
+
+	<h2 id="pages">Pages:</h2>
+	<div>
+		<div class="links">
+			<a href="public_html/chang.html"><img id="changStrange" class="imgLink chang" src="css/imgs/chang.JPG" alt="chang"></a>
+			<img class="down" src="css/imgs/IMG_0060.JPG" alt="No">
+			<p class="imgLinkText dkw">Chang Abusing Single Dogs</p>
+		</div>
+
+		<div class="links">
+		<a href="public_html/tags.html"><img class="imgLink" src="css/imgs/html.png" alt="html"></a>
+		<p>Useful tags</p>
+		</div>
+
+
+
+		<div class="links">
+		<a href="public_html/qiuming.html"><img class="imgLink" src="css/imgs/qiuming.png" alt="MountQiuMing"></a>
+		<p>秋名山</p>
+		</div>
+	</div>
+
+	<br><br><br><br><br>
+	</main>
+
+	<footer>
+		<p> Copyright@Bridger Ma &nbsp;&nbsp;&nbsp;Since Mar. 2017&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  All rights reserved
+		</p>
+		<p>Last update: 6/2/2017</p>
+		<p>Current Date: <span id="dateee"></span></p>
+		<script>document.getElementById('dateee').innerHTML = Date();</script>
+	</footer>
+
+</body>
+
+</html>
+
