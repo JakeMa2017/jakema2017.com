@@ -4,10 +4,22 @@
     URL: http://jakema2017.com
 */
 
+/*
+==========================
+1. General
+2. Home
+3. Navigation
+4. Education
+5. Resume
 
 
 
-/* ===General=== */
+==========================
+*/
+
+
+
+/* #1 ===General=== */
 
 .section-title {
     margin-bottom: 80px;
@@ -26,7 +38,7 @@
 
 
 
-/* === HOME === */
+/* #2 === HOME === */
 @media (max-width : 640px) {
     .fullHeight{
         height: 560px !important;
@@ -83,7 +95,7 @@
     margin-bottom: 40px;
 }
 
-/*--SOCIAL ICON--*/
+/* SOCIAL ICON */
 .social-icons {
     margin-top: 20px;
 }
@@ -136,7 +148,7 @@
     z-index: 0;
 }
 
-/*--Mouse Animation--*/
+/* Mouse Animation */
 
 .mouse {
 	position: absolute;
@@ -172,7 +184,7 @@
 	animation-play-state: running;
 }
 
-/* ===Navigation=== */
+/* #3 ===Navigation=== */
 .general {
 	border-bottom: 2px solid #dddddd;
 	width: 100%;
@@ -218,7 +230,7 @@
 
 
 
-/* ===About=== */
+/* #4 ===About=== */
 .short-info {
     margin-bottom: 40px;
 }
@@ -259,7 +271,7 @@ ul.list-check i {
 	color: #68c3a3;
 }
 
-/* === Resume Section === */
+/* #5 === Resume Section === */
 
 /*---------------------------------------------------------
 Resume Timeline
@@ -478,7 +490,8 @@ Resume Timeline
     color: #fff;
 }
 
-/*.timeline>li .timeline-panel::before,
+/* Little trangle on the left/right of the panel*/
+.timeline>li .timeline-panel::before,
 .timeline>li.timeline-inverted .timeline-panel::before {
     content: "";
     top: 25px;
@@ -486,6 +499,7 @@ Resume Timeline
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
 }
+/* Add to the right most of panels*/
 .timeline>li .timeline-panel::before {
     left: 100%;
     border-left: 12px solid #ECECEC;
@@ -493,33 +507,37 @@ Resume Timeline
     -moz-transition:all 400ms;
     -o-transition:all 400ms;
     transition: all 400ms;
-}*/
-/*.timeline>li .timeline-panel:hover::before {
+}
+/* Hover effect */
+.timeline>li .timeline-panel:hover::before {
     border-left: 12px solid #68c3a3;
-}*/
+}
 
-/*.timeline>li.timeline-inverted .timeline-panel::before {
+/* Add to the left most of panels */
+.timeline>li.timeline-inverted .timeline-panel::before {
     right: 100%;
     border-right: 12px solid #ECECEC;
     -webkit-transition:all 400ms;
     -moz-transition:all 400ms;
     -o-transition:all 400ms;
     transition: all 400ms;
-}*/
-/*.timeline>li.timeline-inverted .timeline-panel:hover::before {
+}
+/* Hover effect */
+.timeline>li.timeline-inverted .timeline-panel:hover::before {
     border-right: 12px solid #68c3a3;
     border-left: 0;
-}*/
+}
 
-/*.timeline>li .timeline-panel::after,
+/* Make the triangle transparent inside */
+.timeline>li .timeline-panel::after,
 .timeline>li.timeline-inverted .timeline-panel::after {
     content: "";
     top: 25px;
     position: absolute;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-}*/
-/*.timeline>li .timeline-panel::after {
+}
+.timeline>li .timeline-panel::after {
     left: 100%;
     margin-left: -2px;
     border-left: 12px solid #FFFFFF;
@@ -544,8 +562,9 @@ Resume Timeline
 .timeline>li.timeline-inverted .timeline-panel:hover::after {
     border-right: 12px solid #68c3a3;
     border-left: 0;
-}*/
+}
 
+/* Date */
 .timeline>li .posted-date {
     left: 50%;
     width: 120px;
@@ -557,6 +576,32 @@ Resume Timeline
 }
 
 
+/* ===Section Divider=== */
+.secDivider-parallax {
+    padding: 150px 0;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.secDivider {
+    background: url('../images/sec_div1.jpg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    top: 0;
+    z-index: 1;
+    opacity: 0.7;
+}
+.content-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1140px;
+    position: relative;
+    z-index: 2;
+}
 
 
 
