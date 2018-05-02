@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    /* ---------------------------------------------- /*
-     * Preloader
-    /* ---------------------------------------------- */
+    // -------------------------------------------------------------
+    // Preloader
+    // -------------------------------------------------------------
 
     $(window).ready(function() {
         $('#pre-status').fadeOut();
@@ -18,22 +18,28 @@ $(document).ready(function(){
         });
 
     }());
-
+    
+    // -------------------------------------------------------------
+    // Parallax Section Divider
+    // -------------------------------------------------------------
     var controller = new ScrollMagic.Controller();
 
-    var introTl = new TimelineMax();
 
-    // introTl
-    //     .to($('.bcg-parallax .bcg'), 1.4, {y: '20%', ease:Power1.easeOut}, '-=0.2')
-    //     .to($('.bcg-parallax'), 0.7, {autoAlpha: 0.5, ease:Power1.easeNone}, '-=1.4');
+    // parallax scene
 
-    // var slideParallaxScene = new ScrollMagic.Scene({
-    //     triggerElement: '.bcg-parallax',
-    //     triggerHook: 5,
-    //     duration: '100%'
-    // })
-    // .setTween(introTl)
-    // .addTo(controller);
+    var parallaxTl = new TimelineMax();
+    parallaxTl
+        // .from('.content-wrapper', 0.4, {autoAlpha: 0, ease:Power0.easeNone}, 0.4)
+        .from('.secDivider', 2, {y: '-50%', ease:Power0.easeNone}, 0)
+        ;
+
+    var slideParallaxScene = new ScrollMagic.Scene({
+        triggerElement: '.secDivider-parallax',
+        triggerHook: 1,
+        duration: '100%'
+    })
+    .setTween(parallaxTl)
+    .addTo(controller);
 
     // -------------------------------------------------------------
     // WOW JS
