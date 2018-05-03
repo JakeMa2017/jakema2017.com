@@ -10,3 +10,10 @@
 TODO:
 
 * Figure out how to control the triangle shape in the right/left of the timeline panel.
+
+# 5.1
+
+* Add a section divider
+   *index.html
+* Add css rules and parallax effect to section divider
+   *index.css, index.js
