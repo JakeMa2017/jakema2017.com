@@ -17,3 +17,10 @@ TODO:
    * index.html
 * Add css rules and parallax effect to section divider
    * index.css, index.js
+
+# 5.2
+
+* Change the font in home intro and about intro
+    * index.css
+* Organized file system
+    * index.html
