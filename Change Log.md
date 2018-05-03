@@ -14,6 +14,6 @@ TODO:
 # 5.1
 
 * Add a section divider
-   *index.html
+   * index.html
 * Add css rules and parallax effect to section divider
-   *index.css, index.js
+   * index.css, index.js
