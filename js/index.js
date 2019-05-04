@@ -56,3 +56,30 @@ $(document).ready(function(){
     }());
 
 });
+
+// Time at the footnote
+
+//document.getElementById('dateee').innerHTML = new Date();
+
+function startTime() {
+    var today = new Date();
+    var y = today.getFullYear();
+    var mon = today.getMonth();
+    var date = today.getDate();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    mon += 1;
+    mon = checkTime(mon);
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('dateee').innerHTML =
+    mon + "/" + date + "/" + y + " " + h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
