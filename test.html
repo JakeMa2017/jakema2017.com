@@ -8,7 +8,7 @@
     <link rel='icon' href='./img/favicon.jpg?v=30' type='jpg'> 
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <link rel="stylesheet" type="text/css" href="./css/index_constructing.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
 	<title>Test</title>
 	<style>
 		#wut {
@@ -18,18 +18,33 @@
 			top: 0;
 			left: 0;
 		}
+		p, span, div {
+			transition: background 2s ease-in-out;
+		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
     $("body").ready(function(){
         $("#name").fadeIn();
-    });
+	});
+	$("#tt").click(function() {
+		$('p').css('width', $(this).attr('test') + '%');
+		$('span').html($("p").attr('test'));
+	});
+	$("#tto").click(function() {
+		 $('span').css("background", $('#abc').attr("testo"));
+		$('span').html($('#abc').attr("testo"));
+	});
+	
 });
 </script>
 </head>
 <body>
 
-	<p class="display-1 text-dark" id="name">Michael Ma</p>
+	<p class="display-1 text-dark" id="name" style="background: yellow;" test="5">Michael Ma</p>
+	<span id="abc" testo="violet">Can we get it?</span>
+	<button id="tt" type="button">click me</button>
+	<button id="tto" type="button">another me</button>
 </body>
 </html>

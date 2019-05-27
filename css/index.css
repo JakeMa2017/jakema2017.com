@@ -11,6 +11,7 @@
 3. Navigation
 4. Education
 5. Resume
+6. Skills
 
 
 
@@ -20,7 +21,9 @@
 
 
 /* #1 ===General=== */
-
+.showBorder {
+    border: violet solid 2px;
+}
 .section-title {
     margin-bottom: 80px;
     text-align: center;
@@ -29,6 +32,18 @@
     color: #2c3e50;
     position: relative;
     text-transform: uppercase;
+}
+
+.section-title::after {
+    content: "";
+    background: url(../images/section-divider.png) no-repeat 0 0;
+    height: 15px;
+    width: 113px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    margin: 0 auto;
 }
 
 .section-padding {
@@ -447,138 +462,140 @@ Resume Timeline
 
 
 @media(min-width:992px) {
-.timeline:before {
-    left: 50%;
-}
+    .timeline:before {
+        left: 50%;
+    }
 
-/*.timeline>li {
-    margin-bottom: 15px;
-    min-height: 100px;
-}*/
 
-.timeline>li .posted-date {
-    position: absolute;
-    text-align: center;
-    background-color: #fff;
-}
+    /*.timeline>li {
+        margin-bottom: 15px;
+        min-height: 100px;
+    }*/
 
-.timeline>li .timeline-panel {
-    float: left;
-    width: 43%;
-    text-align: right;
-    border: 1px solid #eee;
-   /* position: relative;*/
-}
+    .timeline>li .posted-date {
+        position: absolute;
+        text-align: center;
+        background-color: #fff;
+    }
 
-.timeline-content{
-    /*position: relative;*/
-    padding: 24px;
-    background-color: #fff;
-    -webkit-transition:all 400ms;
-    -moz-transition:all 400ms;
-    -o-transition:all 400ms;
-    transition: all 400ms;
-}
+    .timeline>li .timeline-panel {
+        float: left;
+        width: 43%;
+        text-align: right;
+        border: 1px solid #eee;
+    /* position: relative;*/
+    }
 
-/*.timeline-content::after{
-    border: 1px solid #eee;
-    width: 100%;
-    position: relative;
-    content: "";
-    bottom: -3px;
-    height:10px;
-    left: 0;
-    z-index: -1;
-}*/
+    .timeline-content{
+        /*position: relative;*/
+        padding: 24px;
+        background-color: #fff;
+        -webkit-transition:all 400ms;
+        -moz-transition:all 400ms;
+        -o-transition:all 400ms;
+        transition: all 400ms;
+    }
 
-.timeline>li .timeline-content:hover {
-    background: #68c3a3;
-    color: #fff;
-}
+    /*.timeline-content::after{
+        border: 1px solid #eee;
+        width: 100%;
+        position: relative;
+        content: "";
+        bottom: -3px;
+        height:10px;
+        left: 0;
+        z-index: -1;
+    }*/
 
-/* Little trangle on the left/right of the panel*/
-.timeline>li .timeline-panel::before,
-.timeline>li.timeline-inverted .timeline-panel::before {
-    content: "";
-    top: 25px;
-    position: absolute;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-}
-/* Add to the right most of panels*/
-.timeline>li .timeline-panel::before {
-    left: 100%;
-    border-left: 12px solid #ECECEC;
-    -webkit-transition:all 400ms;
-    -moz-transition:all 400ms;
-    -o-transition:all 400ms;
-    transition: all 400ms;
-}
-/* Hover effect */
-.timeline>li .timeline-panel:hover::before {
-    border-left: 12px solid #68c3a3;
-}
+    .timeline>li .timeline-content:hover {
+        background: #68c3a3;
+        color: #fff;
+    }
 
-/* Add to the left most of panels */
-.timeline>li.timeline-inverted .timeline-panel::before {
-    right: 100%;
-    border-right: 12px solid #ECECEC;
-    -webkit-transition:all 400ms;
-    -moz-transition:all 400ms;
-    -o-transition:all 400ms;
-    transition: all 400ms;
-}
-/* Hover effect */
-.timeline>li.timeline-inverted .timeline-panel:hover::before {
-    border-right: 12px solid #68c3a3;
-    border-left: 0;
-}
+    /* Little trangle on the left/right of the panel*/
+    .timeline>li .timeline-panel::before,
+    .timeline>li.timeline-inverted .timeline-panel::before {
+        content: "";
+        top: 25px;
+        position: absolute;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+    /* Add to the right most of panels*/
+    .timeline>li .timeline-panel::before {
+        left: 100%;
+        border-left: 12px solid #ECECEC;
+        -webkit-transition:all 400ms;
+        -moz-transition:all 400ms;
+        -o-transition:all 400ms;
+        transition: all 400ms;
+    }
+    /* Hover effect */
+    .timeline>li .timeline-panel:hover::before {
+        border-left: 12px solid #68c3a3;
+    }
 
-/* Make the triangle transparent inside */
-.timeline>li .timeline-panel::after,
-.timeline>li.timeline-inverted .timeline-panel::after {
-    content: "";
-    top: 25px;
-    position: absolute;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-}
-.timeline>li .timeline-panel::after {
-    left: 100%;
-    margin-left: -2px;
-    border-left: 12px solid #FFFFFF;
-    -webkit-transition:all 400ms;
-    -moz-transition:all 400ms;
-    -o-transition:all 400ms;
-    transition: all 400ms;
-}
-.timeline>li .timeline-panel:hover::after {
-    border-left: 12px solid #68c3a3;
-}
+    /* Add to the left most of panels */
+    .timeline>li.timeline-inverted .timeline-panel::before {
+        right: 100%;
+        border-right: 12px solid #ECECEC;
+        -webkit-transition:all 400ms;
+        -moz-transition:all 400ms;
+        -o-transition:all 400ms;
+        transition: all 400ms;
+    }
+    /* Hover effect */
+    .timeline>li.timeline-inverted .timeline-panel:hover::before {
+        border-right: 12px solid #68c3a3;
+        border-left: 0;
+    }
 
-.timeline>li.timeline-inverted .timeline-panel::after {
-    right: 100%;
-    margin-right:-2px;
-    border-right: 12px solid #FFFFFF;
-    -webkit-transition:all 400ms;
-    -moz-transition:all 400ms;
-    -o-transition:all 400ms;
-    transition: all 400ms;
-}
-.timeline>li.timeline-inverted .timeline-panel:hover::after {
-    border-right: 12px solid #68c3a3;
-    border-left: 0;
-}
+    /* Make the triangle transparent inside */
+    .timeline>li .timeline-panel::after,
+    .timeline>li.timeline-inverted .timeline-panel::after {
+        content: "";
+        top: 25px;
+        position: absolute;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+    .timeline>li .timeline-panel::after {
+        left: 100%;
+        margin-left: -2px;
+        border-left: 12px solid #FFFFFF;
+        -webkit-transition:all 400ms;
+        -moz-transition:all 400ms;
+        -o-transition:all 400ms;
+        transition: all 400ms;
+    }
+    .timeline>li .timeline-panel:hover::after {
+        border-left: 12px solid #68c3a3;
+    }
 
-/* Date */
-.timeline>li .posted-date {
-    left: 50%;
-    width: 120px;
-    margin-left: -60px;
-    margin-top: 28px;
-}
-.timeline>li .posted-date .month {
-    float: none;
+    .timeline>li.timeline-inverted .timeline-panel::after {
+        right: 100%;
+        margin-right:-2px;
+        border-right: 12px solid #FFFFFF;
+        -webkit-transition:all 400ms;
+        -moz-transition:all 400ms;
+        -o-transition:all 400ms;
+        transition: all 400ms;
+    }
+    .timeline>li.timeline-inverted .timeline-panel:hover::after {
+        border-right: 12px solid #68c3a3;
+        border-left: 0;
+    }
+
+    /* Date */
+    .timeline>li .posted-date {
+        left: 50%;
+        width: 120px;
+        margin-left: -60px;
+        margin-top: 28px;
+    }
+    .timeline>li .posted-date .month {
+        float: none;
+    }
 }
 
 
@@ -608,6 +625,160 @@ Resume Timeline
     position: relative;
     z-index: 2;
 }
+
+/* #6 === Skill Section === */
+.skills-section {
+    background-color: #1a1e23;
+    color: #fff;   
+}
+.skills-section .section-title{
+    color: #fff;
+    margin-bottom: 110px;  
+}
+.skills-section .section-title h2{
+    color: #fff;
+}
+.skill-title {
+    width: 20%;
+    float: left;
+}
+.skill-title h3{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: -6px;
+    
+}
+
+
+
+/* progress-bar */
+
+.skill-progress {
+    position: relative;
+}
+
+.progress {
+    height: 10px;
+    margin-bottom: 40px;
+    background-color: #3a4149;
+    border-radius: 3px;
+    box-shadow: none;
+    width: 80%;
+}
+
+.progress-bar {
+    background-color: #68c3a3;
+    width: 0%;
+}
+
+
+.progress-bar-b {
+    background-color: #68c3a3;
+    width: 0%;
+}
+
+.progress-bar span{
+    position: absolute;
+    top: -20px;
+    right: 15px;
+}
+
+.skill-progress .container .row span{
+    position: absolute;
+    top: -20px;
+    right: 15px;
+    font-size: 12px;
+
+}
+
+.progress .progress-bar.six-sec-ease-in-out-a{
+  -webkit-transition: width 2s ease-in-out;
+  -moz-transition: width 2s ease-in-out;
+  -o-transition: width 2s ease-in-out;
+  transition:  width 0.5s ease-in-out;
+}
+.progress .progress-bar.six-sec-ease-in-out-b{
+    -webkit-transition: width 2s ease-in-out;
+    -moz-transition: width 2s ease-in-out;
+    -o-transition: width 2s ease-in-out;
+    transition:  width 0.5s ease-in-out 0.45s;
+}
+  .progress .progress-bar.six-sec-ease-in-out-c{
+    -webkit-transition: width 2s ease-in-out;
+    -moz-transition: width 2s ease-in-out;
+    -o-transition: width 2s ease-in-out;
+    transition:  width 0.5s ease-in-out 0.9s;
+  }
+  .progress .progress-bar.six-sec-ease-in-out-d{
+    -webkit-transition: width 2s ease-in-out;
+    -moz-transition: width 2s ease-in-out;
+    -o-transition: width 2s ease-in-out;
+    transition:  width 0.5s ease-in-out 1.35s;
+}
+
+
+
+.skill-chart h3 {
+    margin-top: 20px;
+}
+
+/* .our-progress{
+    margin:10px 0 30px;
+} */
+
+.progress-percent{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .our-progress h3{
+    font-weight: 400;
+    margin-bottom: 5px;
+} */
+
+
+
+/* === Chart CSS  === */
+.chart {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    margin: 40px auto;
+    text-align: center;
+}
+.chart canvas {
+    position:absolute; 
+    top:0; 
+    left:0;
+}
+.percent {
+    display: inline-block;
+    margin: auto;
+    line-height: 140px;
+    z-index: 2;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.percent:after {
+    content: '%';
+}
+
+.chart-text span {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    display: block;
+    margin-top: 20px;
+}
+
+/*.percent:after {content: '%';margin-left: 0.1em;font-size: .8em;}*/
+/* .angular{margin-top:100px;}
+.angular .chart {margin-top:0;}
+.chart .chart-text h3{font-size:22px;} */
+
 
 
 
