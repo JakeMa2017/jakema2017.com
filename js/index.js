@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+    (function () {
+        $(".fullHeight").height($(window).height());
+
+        // Make sure the size always fit to window by changing the size of window
+        $(window).resize(function(){
+            $(".fullHeight").height($(window).height());
+        });
+    }());
+
     // -------------------------------------------------------------
     // Preloader
     // -------------------------------------------------------------
@@ -9,24 +18,12 @@ $(document).ready(function(){
         $('#preloader').delay(350).fadeOut('slow');
     });
 
-    (function () {
-        $(".fullHeight").height($(window).height());
-
-        // Make sure the size always fit to window by changing the size of window
-        $(window).resize(function(){
-            $(".fullHeight").height($(window).height());
-        });
-
-    }());
-    
     // -------------------------------------------------------------
     // Parallax Section Divider
     // -------------------------------------------------------------
     var controller = new ScrollMagic.Controller();
 
-
     // parallax scene
-
     var parallaxTl = new TimelineMax();
     parallaxTl
         // .from('.content-wrapper', 0.4, {autoAlpha: 0, ease:Power0.easeNone}, 0.4)
@@ -42,17 +39,50 @@ $(document).ready(function(){
     .addTo(controller);
 
     // -------------------------------------------------------------
+    // Progress Bar
+    // -------------------------------------------------------------
+
+    $('.skill-progress').on('inview', function(event, visible, visiblePartX, visiblePartY) {
+        if (visible) {
+            $.each($('div.progress-bar'),function(){
+                $(this).css('width', $(this).attr('aria-valuenow')+'%');
+            });
+            $(this).unbind('inview');
+        }
+    });
+
+    // -------------------------------------------------------------
+    // More skill
+    // -------------------------------------------------------------
+    $('.more-skill').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+        if (visible) {
+            $('.chart').easyPieChart({
+                //your configuration goes here
+                easing: 'easeOut',
+                delay: 3000,
+                barColor:'#68c3a3',
+                trackColor:'rgba(255,255,255,0.2)',
+                scaleColor: false,
+                lineWidth: 8,
+                size: 140,
+                animate: 2000,
+                onStep: function(from, to, percent) {
+                    this.el.children[0].innerHTML = Math.round(percent);
+                }
+
+            });
+            $(this).unbind('inview');
+        }
+    });
+
+    // -------------------------------------------------------------
     // WOW JS
     // -------------------------------------------------------------
 
     (function () {
-
         new WOW({
-
             mobile: true
-
         }).init();
-
     }());
 
 });
