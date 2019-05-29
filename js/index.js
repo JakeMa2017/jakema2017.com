@@ -9,6 +9,8 @@ $(document).ready(function(){
         });
     }());
 
+    $("#myNav").scrollspy({ offset: -230 });
+
     // -------------------------------------------------------------
     // Preloader
     // -------------------------------------------------------------
@@ -76,6 +78,34 @@ $(document).ready(function(){
     });
 
     // -------------------------------------------------------------
+    // Animated scrolling / Scroll Up
+    // -------------------------------------------------------------
+
+    (function () {
+        $('a[href*=#]').bind("click", function(e){
+            var anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(anchor.attr('href')).offset().top
+            }, 1000);
+            e.preventDefault();
+        });
+    }());
+
+    // -------------------------------------------------------------
+    // Back To Top
+    // -------------------------------------------------------------
+
+    (function () {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('.scroll-up').fadeIn();
+            } else {
+                $('.scroll-up').fadeOut();
+            }
+        });
+    }());
+
+    // -------------------------------------------------------------
     // WOW JS
     // -------------------------------------------------------------
 
@@ -84,6 +114,13 @@ $(document).ready(function(){
             mobile: true
         }).init();
     }());
+
+    // (function () {
+    //     $('#myNav').scrollspy({
+    //         target: '.navbar-custom',
+    //         offset: 70
+    //     })
+    // }());
 
 });
 
@@ -112,4 +149,14 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
+
+function initMap() {
+    // The location of Uluru
+    var home = {lat: 44.971808, lng: -93.224675};
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+        document.getElementById('mapCanvas'), {zoom: 11, center: home});
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({position: home, map: map});
+  }
 

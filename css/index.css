@@ -19,11 +19,130 @@
 */
 
 
+/* #0 === Preloader === */
+#preloader {
+    background: #ffffff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 9999;
+}
 
-/* #1 ===General=== */
+#pre-status,
+.preload-placeholder {
+    background-image: url(../images/preloader.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    position: absolute;
+    top: 50%;
+    width: 200px;
+}
+
+.preload-placeholder {
+    background: none;
+    left: 0;
+    margin: 0;
+    text-align: center;
+    top: 65%;
+}
+
+
+/* #1 === General === */
 .showBorder {
     border: violet solid 2px;
+    font-weight: 300;
+    font-size: 14px;
 }
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2{
+    font-weight: bold;
+}
+
+/*--- Button Style ---*/
+.btn{
+    border: 0;
+    border-bottom: 3px solid;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 28px;
+    padding: 9px 22px;
+}
+
+/*btn-primary*/
+.btn-primary{
+    background-color:#68c3a3;
+    border-color: rgba(51, 51, 51, 0.15);
+}
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary.focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #4eb28f;
+    border-color: #4eb28f;
+}
+
+/*btn-info*/
+.btn-info{
+    background-color:#52b3d9;
+    border-color: rgba(51, 51, 51, 0.15);
+}
+
+.btn-info:hover, 
+.btn-info:focus, 
+.btn-info.focus, 
+.btn-info:active, 
+.btn-info.active, 
+.open>.dropdown-toggle.btn-info {
+    color: #fff;
+    background-color: #4aa0c2;
+    border-color: #4aa0c2;
+}
+
+/*btn-default*/
+.btn-default {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.btn-default:hover, 
+.btn-default:focus, 
+.btn-default.focus, 
+.btn-default:active, 
+.btn-default.active{
+    color: #68c3a3;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+button:focus {
+    outline: none;
+}
+
+.form-control {
+    height: 45px;
+    background-color: #f7f7f7;
+    border: 1px solid #e8e8e8;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #68c3a3;
+    box-shadow: none;
+}
+
 .section-title {
     margin-bottom: 80px;
     text-align: center;
@@ -101,6 +220,7 @@
     line-height: 80px;
     margin-bottom: 16px;
     color: #52b3d9;
+    font-weight: bold;
 }
 .intro h1 span{
     color: #68c3a3;
@@ -234,7 +354,8 @@
     padding-bottom: 20px;
 }
 
-
+.navbar-custom .nav li.active,
+.navbar .navbar-nav .nav-item .nav-link.active,
 .navbar-nav .nav-item .nav-link:hover,
 .navbar-nav .nav-item .nav-link:focus,
 .nav-custom .navbar-nav .nav-item.active > a {
@@ -601,23 +722,29 @@ Resume Timeline
 
 /* ===Section Divider=== */
 .secDivider-parallax {
-    padding: 150px 0;
+    padding: 200px 0;
     color: #fff;
-    background-color: #000;
     text-align: center;
     position: relative;
     overflow: hidden;
+    background: -webkit-linear-gradient(bottom, #68C3A3, rgba(104, 195, 163, 0.7)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top, #68C3A3, rgba(104, 195, 163, 0.7)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top, #68C3A3, rgba(104, 195, 163, 0.7)); /*Fx 3.6-15*/
+    background: linear-gradient(to top, #68C3A3, rgba(104, 195, 163, 0.7)); /*Standard*/
 }
+
 .secDivider {
-    background: url('../images/sec_div1.jpg') no-repeat;
+    background: url('../images/divider-1.jpg') no-repeat top center #68C3A3;
     background-size: cover;
     position: absolute;
     width: 100%;
-    height: 150%;
+    height: 180%;
     top: 0;
     z-index: 1;
-    opacity: 0.7;
+    opacity: 0.4;
 }
+
+
 .content-wrapper {
     width: 90%;
     margin: 0 auto;
@@ -716,27 +843,14 @@ Resume Timeline
     transition:  width 0.5s ease-in-out 1.35s;
 }
 
-
-
 .skill-chart h3 {
     margin-top: 20px;
 }
-
-/* .our-progress{
-    margin:10px 0 30px;
-} */
 
 .progress-percent{
     margin-left: auto;
     margin-right: auto;
 }
-
-/* .our-progress h3{
-    font-weight: 400;
-    margin-bottom: 5px;
-} */
-
-
 
 /* === Chart CSS  === */
 .chart {
@@ -774,54 +888,87 @@ Resume Timeline
     margin-top: 20px;
 }
 
-/*.percent:after {content: '%';margin-left: 0.1em;font-size: .8em;}*/
-/* .angular{margin-top:100px;}
-.angular .chart {margin-top:0;}
-.chart .chart-text h3{font-size:22px;} */
+/* === #7 Contact Section === */
+.contact-section strong {
+    display: block;
+    text-transform: uppercase;
+}
+.contact-form strong {
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.contact-form textarea.form-control {
+    height: 115px;
+}
+
+.contact-form .btn {
+    margin-top: 15px;
+}
+
+.contact-section div > i{
+    float: left;
+    font-size: 45px;
+    margin-right: 20px;
+}
+.contact-section address,
+.contact-section .contact-number {
+    overflow: hidden;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 45px
+}
 
 
+/*MAP*/
+.location-map {
+    padding: 4px;
+    border: 1px solid #eee;
+    border-bottom: 3px double #eee;
+}
+.map-canvas {
+    height: 380px;
+}
 
-
-/*-------------------------------------------------------*/
+/* === #8 Footer === */
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-
-/* ---------------------------------------------- /*
- * Preloader
-/* ---------------------------------------------- */
-
-#preloader {
-    background: #ffffff;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    z-index: 9999;
+footer h6 {
+    color: white;
 }
 
-#pre-status,
-.preload-placeholder {
-    background-image: url(../images/preloader.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 200px;
-    left: 50%;
-    margin: -100px 0 0 -100px;
-    position: absolute;
-    top: 50%;
-    width: 200px;
+footer div .row{
+    padding: 0px;
+    margin: 0px;
 }
 
-.preload-placeholder {
-    background: none;
-    left: 0;
-    margin: 0;
-    text-align: center;
-    top: 65%;
+/* === #9 Scrool To Top === */
+.scroll-up {
+	position: fixed;
+	display: none;
+	z-index: 999;
+	bottom: 1.8em;
+	right: 1.8em;
+}
+
+.scroll-up a {
+	background-color: #68c3a3;
+	display: block;
+	width: 38px;
+	height: 38px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	line-height: 28px;
+}
+
+.scroll-up a:hover,
+.scroll-up a:active {
+	background-color: rgba(235, 235, 235, .8);
+	color: #222;
 }
 

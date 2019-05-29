@@ -30,7 +30,10 @@
 		padding:10px 15px;
 	}
 
-
+	.bcg {
+		background-image: url(../images/IMG_2927.jpg);
+		background-attachment: scroll;
+	}
 
 	/*about me section*/
 	.biography {
@@ -53,43 +56,13 @@
 		left:1px;
 	}
 
+	.secDivider-parallax {
+		padding-top: 100px;
+	}
+
 	/*skill section*/
 	.skill-title h3 {
 		font-size: 12px;
-	}
-
-	/*facts section*/
-	.count-wrap i {
-		font-size: 40px;
-	}
-
-	.count-wrap h3 {
-		font-size: 30px;
-		line-height: 16px;
-	}
-
-	.count-wrap p {
-		font-size: 10px;
-		font-weight: 400;
-		line-height: 18px;
-	}
-
-	.count-wrap > div{
-		margin-bottom: 40px;
-	}
-
-	#filter li{
-		margin-bottom: 20px;
-	}
-
-	/*blog section*/
-	.blog-post-wrapper {
-		margin-bottom: 40px;
-	}
-
-	/*hire us section*/
-	.hire-section h2 {
-		line-height: 40px;
 	}
 
 	/*contact section*/
@@ -103,20 +76,6 @@
 	}
 	.center-xs {
 		text-align: center;
-	}
-
-	/*service*/
-	.service-wrap > div{
-		margin-bottom:100px;
-	}
-
-	.service-wrap > div:nth-child(4){
-		margin-bottom:0;
-	}
-
-	/*HOME TWO*/
-	#homeTwo:before{
-		width:100%;
 	}
 
 	.personal-info{
