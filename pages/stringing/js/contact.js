@@ -54,4 +54,6 @@ $(document).ready(function(){
         }
     });// ui form
 
+    $('.menu .item').tab();
+
 });
