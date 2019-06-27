@@ -109,6 +109,10 @@ form {
         padding: 0%;
     }
 
+    #tabs-row {
+        font-size: 18px;
+    }
+
     #racket-model::placeholder {
         font-size: 14px;
     }

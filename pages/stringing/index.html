@@ -32,10 +32,10 @@
 
 			
 	  <div class="ui fluid container form-container" id="containerFluid1" style="width: 80%;">
-        <div class="ui top attached tabular menu" style="background: white; font-size: 25px;">
-              <a class="item active " data-tab="first" style="width:30%">Service Form</a>
-              <a class="item" data-tab="second" style="width:30%">Status</a>
-              <a class="item" data-tab="third" style="width:30%">FAQ</a>
+        <div class="ui top attached tabular menu" style="background: white; font-size: 25px;" id="tabs-row">
+              <a class="item active " data-tab="first" style="width:33%">Service Form</a>
+              <a class="item" data-tab="second" style="width:33%">Status</a>
+              <a class="item" data-tab="third" style="width:34%">FAQ</a>
         </div>
         <div class="ui bottom attached tab segment active" data-tab="first">
           <form class="ui big form warning" action="email.php" method="POST" id="submitForm">
@@ -139,6 +139,7 @@
               <th>Racket Model</th>
               <th>String</th>
               <th>Tension</th>
+              <th>Received Date</th>
               <th>Status</th>
               <th>Memo</th>
             </thead>
@@ -147,6 +148,7 @@
                 <td>Yonex Astrox 99</td>
                 <td>Yonex BG66 Ultimax</td>
                 <td>26 lbs</td>
+                <td>6/21</td>
                 <td>Stringing now</td>
                 <td>Pick up on Friday 6/28</td>
               </tr>
@@ -154,6 +156,7 @@
                   <td>Yonex ArcSaber 2</td>
                   <td>Yonex NBG 99</td>
                   <td>24 lbs</td>
+                  <td>6/21</td>
                   <td>Next in line</td>
                   <td>Estimated to be done by this Friday 6/28 or next Monday 7/1</td>
               </tr>
@@ -161,13 +164,31 @@
                   <td>Yonex ZF2</td>
                   <td>Yonex BG66 Ultimax</td>
                   <td>26 lbs</td>
+                  <td>6/21</td>
                   <td>Next in line</td>
                   <td>Estimated to be done by next Wednesday 7/3 or next Friday 7/5</td>
               </tr>
               <tr class="disabled">
                 <td>Yonex Astrox 99</td>
-                <td>Yonex BG65</td>
+                <td>Yonex BG65 White</td>
                 <td>26 lbs</td>
+                <td>6/19</td>
+                <td>Picked up</td>
+                <td></td>
+              </tr>
+              <tr class="disabled">
+                <td>Yonex JS 12 F</td>
+                <td>Yonex BG65 Green</td>
+                <td>25 lbs</td>
+                <td>6/8</td>
+                <td>Picked up</td>
+                <td></td>
+              </tr>
+              <tr class="disabled">
+                <td>Yonex NS9900</td>
+                <td>Yonex BG65 White</td>
+                <td>24 lbs</td>
+                <td>6/1</td>
                 <td>Picked up</td>
                 <td></td>
               </tr>
@@ -183,10 +204,10 @@
           <p>&nbsp;&nbsp;&nbsp;&nbsp;A: As shown in the form, I have Yonex BG65, BG66u and NBG 99.</p>
           <br>
           <p>Q: How long it takes for my racket to be strung?</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;A: On average, it takes me 2-3 days to get one racket done. See status tab for the most updated time.</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;A: On average, it takes 2-3 days to get one racket done. See status tab for the most updated time.</p>
           <br>
           <p>Q: What does this "Flexible Pick Up Time" mean?</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;A: I usually play on Mon, Wed and Fri afternoon from 5:30 - 7:00 every week. You can just come to the court to get your racket.</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;A: I usually play on Mon, Wed and Fri afternoon from 5:30 - 7:00 every week. You can just come to the court at that time to get your racket.</p>
           <br>
         </div>
 		</div><!-- container-fluid -->
