@@ -33,11 +33,9 @@ html, body, main {
     height: 100%;
 }
 
-.tabs-row {
+#tabs-row {
     font-size: 35px;
-
 }
-
 /* === Form === */
 .form-container {
     width: 80%;
