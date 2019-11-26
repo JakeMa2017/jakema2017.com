@@ -75,15 +75,15 @@
           style="background: white"
           id="tabs-row"
         >
-          <a class="item" data-tab="first" style="width:33%">Status</a>
-          <a class="item active " data-tab="second" style="width:33%"
+          <a class="item active" data-tab="first" style="width:33%">Status</a>
+          <a class="item" data-tab="second" style="width:33%"
             >Service Form</a
           >
           <a class="item" data-tab="third" style="width:34%">FAQ</a>
         </div>
 
         <!-- Status -->
-        <div class="ui bottom attached tab segment" data-tab="first">
+        <div class="ui bottom attached tab segment active" data-tab="first">
           <div>
             <p id="updateTime"></p>
           </div>
@@ -139,7 +139,7 @@
                 <td>11/13</td>
                 <td>Picked up</td>
               </tr>
-              <tr class="positive">
+              <tr class="disabled">
                 <td>VT7</td>
                 <td>65</td>
                 <td>27 lbs</td>
@@ -201,7 +201,7 @@
         <!-- First - status -->
 
         <!-- Second - Service Form -->
-        <div class="ui bottom attached tab segment active" data-tab="second">
+        <div class="ui bottom attached tab segment" data-tab="second">
           <form
             class="ui big form warning"
             action="email.php"
